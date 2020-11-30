@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">faircorp</string>
+    <string name="welcome_on_faircorp">Welcome on faircorp\n the app to manage building windows</string>
+    <string name="logo_of_faircorp">logo of faircorp</string>
+    <string name="window_name">Window name</string>
+    <string name="open_window">Open window</string>
+</resources>
