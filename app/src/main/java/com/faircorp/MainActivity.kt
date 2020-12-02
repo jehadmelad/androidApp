@@ -10,19 +10,19 @@ import android.widget.Toast
 
 const val WINDOW_NAME_PARAM = "com.faircorp.windowname.attribute"
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BasicActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
 
-    fun openWindow(view: View) {
-        val windowName = findViewById<EditText>(R.id.txt_window_name).text.toString()
-
-        // Do something in response to button
-        val intent = Intent(this, WindowActivity::class.java).apply {
-            putExtra(WINDOW_NAME_PARAM, windowName)
-        }
-        startActivity(intent)
-    }
+//    fun openWindow(view: View) {
+////        val windowName = findViewById<EditText>(R.id.txt_window_name).text.toString()
+//
+//        // Do something in response to button
+////        val intent  = Intent(this, WindowActivity::class.java).apply {
+////            putExtra(WINDOW_NAME_PARAM, windowName)
+//        }
+//        startActivity(intent)
+//    }
 }

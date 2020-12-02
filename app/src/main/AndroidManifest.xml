@@ -9,8 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Faircorp">
-        <activity android:name=".WindowActivity" android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".MainActivity" >
+        <activity
+            android:name=".BasicActivity"
+            android:label="@string/title_activity_basic"
+            android:theme="@style/Theme.Faircorp.NoActionBar"></activity>
+        <activity android:name=".BuildingWindowsActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".WindowActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
