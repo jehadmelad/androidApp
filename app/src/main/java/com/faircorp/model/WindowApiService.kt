@@ -9,11 +9,6 @@ interface WindowApiService {
     fun findAll(): Call<List<WindowDto>>
 
     @GET("windows/{id}")
-    fun findById(@Path("id") id : Long): Call<List<WindowDto>>
+    fun findById(@Path("id") id: Long): Call<WindowDto>
 
-    @GET("windows")
-    fun findAll(@Query("sort") sort: String): Call<List<WindowDto>>
-
-    @PUT("windows/{id}")
-    fun updateWindow(@Path("id") id: Long, @Body window: WindowDto): Call<List<WindowDto>>
 }
