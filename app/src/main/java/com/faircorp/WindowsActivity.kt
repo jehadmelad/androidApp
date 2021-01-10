@@ -1,10 +1,7 @@
 package com.faircorp
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -18,20 +15,14 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class BuildingWindowsActivity : BasicActivity(), OnWindowSelectedListener {
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_building_windows)
-//        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-//
-//
-//    }
+class WindowsActivity : BasicActivity(), OnWindowSelectedListener {
+
 
     val windowService = WindowService() // (1)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_building_windows)
+        setContentView(R.layout.activity_windows)
 
         val recyclerView = findViewById<RecyclerView>(R.id.list_windows) // (2)
         val adapter = WindowAdapter(this) // (3)
@@ -52,20 +43,20 @@ class BuildingWindowsActivity : BasicActivity(), OnWindowSelectedListener {
 
         lifecycleScope.launch(context = Dispatchers.IO) { // (1)
             runCatching { ApiServices().windowsApiService.findAll().execute() } // (2)
-                .onSuccess {
-                    withContext(context = Dispatchers.Main) { // (3)
-                        adapter.update(it.body() ?: emptyList())
+                    .onSuccess {
+                        withContext(context = Dispatchers.Main) { // (3)
+                            adapter.update(it.body() ?: emptyList())
+                        }
                     }
-                }
-                .onFailure {
-                    withContext(context = Dispatchers.Main) { // (3)
-                        Toast.makeText(
-                            applicationContext,
-                            "Error on windows loading $it",
-                            Toast.LENGTH_LONG
-                        ).show()
+                    .onFailure {
+                        withContext(context = Dispatchers.Main) { // (3)
+                            Toast.makeText(
+                                    applicationContext,
+                                    "Error on windows loading $it",
+                                    Toast.LENGTH_LONG
+                            ).show()
+                        }
                     }
-                }
         }
     }
     override fun onWindowSelected(id: Long) {

@@ -7,7 +7,7 @@ class ApiServices {
     val windowsApiService : WindowApiService by lazy {
         Retrofit.Builder()
             .addConverterFactory(MoshiConverterFactory.create())
-            .baseUrl("https://jehadmelad.cleverapps.io:443/api/")
+            .baseUrl("https://dev-mind.fr/training/android/\n")
             .build()
             .create(WindowApiService::class.java)
     }
