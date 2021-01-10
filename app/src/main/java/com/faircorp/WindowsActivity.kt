@@ -18,7 +18,7 @@ import kotlinx.coroutines.withContext
 class WindowsActivity : BasicActivity(), OnWindowSelectedListener {
 
 
-    val windowService = WindowService() // (1)
+    val windowService = WindowService() // (1) just test
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
