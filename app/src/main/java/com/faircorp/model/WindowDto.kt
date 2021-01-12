@@ -1,6 +1,9 @@
 package com.faircorp.model
 
-enum class Status{OPEN,CLOSED}
+enum class Status{
+    OPEN,
+    CLOSED
+}
 
 class WindowDto(
     val id: Long,
