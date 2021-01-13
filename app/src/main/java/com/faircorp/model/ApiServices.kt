@@ -10,15 +10,11 @@ class ApiServices {
     //    https://jehad.cleverapps.io:443/api/
     //    https://dev-mind.fr/training/android/
     //    http://192.168.1.30:8080/api/
-    val windowsApiService : WindowApiService by lazy {
+    val windowsApiService: WindowApiService by lazy {
         Retrofit.Builder()
-            .addConverterFactory(MoshiConverterFactory.create())
-            .baseUrl("https://jehad.cleverapps.io:443/api/")
-            .build()
-            .create(WindowApiService::class.java)
+                .addConverterFactory(MoshiConverterFactory.create())
+                .baseUrl("http://192.168.1.30:8080/api/")
+                .build()
+                .create(WindowApiService::class.java)
     }
-
 }
-
-
-

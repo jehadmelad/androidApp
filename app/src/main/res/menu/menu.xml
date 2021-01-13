@@ -7,6 +7,14 @@
         android:title="@string/menu_windows"
         app:showAsAction="never" />
     <item
+        android:id="@+id/menu_heater"
+        android:title="@string/menu_heater"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_room"
+        android:title="@string/menu_room"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/menu_website"
         android:title="@string/menu_website"
         app:showAsAction="never" />

@@ -5,11 +5,17 @@
     <string name="window_name">Window name</string>
     <string name="open_window">Open window</string>
 
-    <!-- ... -->
+    <!-- #############################################################  Menu Strings -->
     <string name="menu_windows">Building windows</string>
+    <string name="menu_heater">Building heater</string>
+    <string name="menu_room">Building rooom</string>
+
+
     <string name="menu_website">Our website</string>
     <string name="menu_email">Send us an email</string>
     <string name="title_activity_basic">BasicActivity</string>
+
+    <!--##############################################################  end Menu  -->
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
@@ -19,6 +25,7 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
+    <!-- #############################################################  WindosDto Strings -->
     <string name="act_window_name">Window name</string>
     <string name="act_window_room">Room</string>
     <string name="act_window_room_target_temp">Target room temperature</string>
